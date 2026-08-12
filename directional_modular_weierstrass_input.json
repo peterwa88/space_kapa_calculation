@@ -1,0 +1,22 @@
+{
+  "mode": "regional_observed",
+  "H_region_km_s_Mpc": "72.6",
+  "H_background_km_s_Mpc": "0.0",
+  "H_reference_km_s_Mpc": "72.6",
+  "H_local_km_s_Mpc": "72.6",
+  "H_baseline_km_s_Mpc": "67.4",
+  "primitive_time_s": "5.391247e-44",
+  "eta_in": "1.0",
+  "eta_out": "1.0",
+  "response_phase_rad": "0.0",
+  "solve_mode": "real",
+  "delta_initial_real": "1.13e-16",
+  "delta_initial_imag": "0.0",
+  "lattice_truncation": 8,
+  "working_precision_digits": 100,
+  "q_series_terms": 80,
+  "truncation_scan": [4, 6, 8, 10, 12, 16, 20],
+  "include_residual_branch": true,
+  "illustrative_luminosity_W": "1e39",
+  "illustrative_domain_scale_m": "3.0856775814913673e22"
+}
