@@ -1,0 +1,8 @@
+{
+  "Planck_mass_energy_equivalent_GeV": "1.220890e19",
+  "atmospheric_mass_squared_splitting_eV2": "2.513e-3",
+  "rounded_neutrino_mass_benchmark_eV": "0.05",
+  "KATRIN_effective_mass_upper_limit_eV_90CL": "0.45",
+  "modular_kappa_benchmark": "2.81005508341944e14",
+  "seesaw_heavy_mass_benchmarks_GeV": ["1e14", "1e15"]
+}

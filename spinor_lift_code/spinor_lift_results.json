@@ -1,0 +1,47 @@
+{
+  "inputs": {
+    "Planck_mass_GeV": "1.220890E+19",
+    "Reduced_Planck_mass_GeV": "2435323203596525710.8505037255664373970174552210148",
+    "Delta_m2_atmospheric_eV2": "0.002513",
+    "m_atmospheric_scale_eV": "0.050129831437977127911881803731386258261779396204679",
+    "KATRIN_mbeta_upper_eV_90CL": "0.45",
+    "kappa_modular_benchmark": "281005508341944"
+  },
+  "mass_ratio_estimates": [
+    {
+      "case": "Rounded neutrino benchmark",
+      "m_low_eV": "0.05",
+      "kappa_Planck": "494143703794756.44999604718750173018642844617168574",
+      "kappa_reduced_Planck": "220695410174136.86625083509059764205961155230016811"
+    },
+    {
+      "case": "Atmospheric-splitting benchmark",
+      "m_low_eV": "0.050129831437977127911881803731386258261779396204679",
+      "kappa_Planck": "493503396628968.57473434755301541808453544873627403",
+      "kappa_reduced_Planck": "220409434957806.49941525823677787917568119317005042"
+    },
+    {
+      "case": "KATRIN upper-limit benchmark",
+      "m_low_eV": "0.45",
+      "kappa_Planck": "164714567931585.48333201572916724339547614872389525",
+      "kappa_reduced_Planck": "73565136724712.288750278363532547353203850766722703"
+    }
+  ],
+  "inverse_predictions_using_kappa_modular": {
+    "m_from_Planck_eV": "0.15461330733807711706739758951932491717895328205560",
+    "m_from_reduced_Planck_eV": "0.030840892704930024954285359106000314065819608855377",
+    "partner_mass_for_m0p05_GeV": "3948204785925717948.6014849568"
+  },
+  "seesaw_comparison": [
+    {
+      "M_R_GeV": "1E+14",
+      "m_light_eV": "0.05",
+      "kappa_if_scalar_lift": "1414213562373.0950488016887242096980785696718753769"
+    },
+    {
+      "M_R_GeV": "1E+15",
+      "m_light_eV": "0.05",
+      "kappa_if_scalar_lift": "4472135954999.5793928183473374625524708812367192231"
+    }
+  ]
+}
