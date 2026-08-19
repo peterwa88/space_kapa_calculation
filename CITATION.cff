@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Space Kappa Calculation Reproducibility Package"
+type: software
+version: 1.0.0
+authors:
+  - family-names: "Wang"
+    given-names: "Peter Yongtao"
+    orcid: "https://orcid.org/0009-0005-5292-009X"
+repository-code: "https://github.com/peterwa88/space_kapa_calculation"
+license: MIT
