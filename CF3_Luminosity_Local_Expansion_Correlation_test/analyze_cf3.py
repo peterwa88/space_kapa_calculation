@@ -144,15 +144,17 @@ g["sky_z"] = np.sin(lat)
 
 # Preregistered-style quality cuts: Hubble-flow velocities suppress peculiar-motion
 # dominance; repeated distances and modulus-error cuts suppress noisy groups; CF cut
-# limits the largest catalog lost-light corrections; broad H cut removes catastrophes.
-primary = g.loc[
+# limits the largest catalog lost-light corrections.  The broad H cut in the primary
+# sample removes catastrophes; primary_no_hloc_cut retains the same eligible groups
+# without that outcome-variable cut as a prespecified sensitivity analysis.
+primary_no_hloc_cut = g.loc[
     g[["Nest", "Dist", "Vcmb", "logLKs", "CF", "Npv", "eDM", "Ndist"]].notna().all(axis=1)
     & g["Vcmb"].between(3000, 15000)
     & (g["Ndist"] >= 2)
     & (g["eDM"] <= 0.30)
     & g["CF"].between(1, 10)
-    & g["Hloc"].between(40, 110)
 ].copy()
+primary = primary_no_hloc_cut.loc[primary_no_hloc_cut["Hloc"].between(40, 110)].copy()
 
 # A stricter high-quality sample.
 strict = primary.loc[(primary["Ndist"] >= 3) & (primary["eDM"] <= 0.20) & (primary["CF"] <= 5)].copy()
@@ -181,7 +183,13 @@ sn["sky_z"] = np.sin(lat)
 sn = sn.loc[sn["Vcmb"].between(3000, 15000) & sn["CF"].between(1, 10) & sn["Hloc"].between(40, 110)].copy()
 
 results = {}
-for label, df in [("primary", primary), ("strict", strict), ("sn_only", sn)]:
+samples = [
+    ("primary", primary),
+    ("strict", strict),
+    ("sn_only", sn),
+    ("primary_no_hloc_cut", primary_no_hloc_cut),
+]
+for label, df in samples:
     res, xr, yr = summarize(df.reset_index(drop=True), label)
     results[label] = res
     out = df.reset_index(drop=True).copy()

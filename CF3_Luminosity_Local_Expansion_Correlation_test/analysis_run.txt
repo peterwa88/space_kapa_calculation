@@ -8,11 +8,13 @@
   result = getattr(ufunc, method)(*inputs, **kwargs)
 /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pandas/core/arraylike.py:399: RuntimeWarning: divide by zero encountered in log10
   result = getattr(ufunc, method)(*inputs, **kwargs)
-/workspace/scratch/492015b7a717/CF3_Luminosity_Local_Expansion_Reproducibility/analyze_cf3.py:108: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+/workspace/scratch/492015b7a717/cf3_package_audit_20260819/CF3_Luminosity_Local_Expansion_Reproducibility/analyze_cf3.py:108: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
   for name, sub in df.groupby(pd.qcut(df["logV"], 4, labels=["Q1", "Q2", "Q3", "Q4"])):
-/workspace/scratch/492015b7a717/CF3_Luminosity_Local_Expansion_Reproducibility/analyze_cf3.py:108: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+/workspace/scratch/492015b7a717/cf3_package_audit_20260819/CF3_Luminosity_Local_Expansion_Reproducibility/analyze_cf3.py:108: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
   for name, sub in df.groupby(pd.qcut(df["logV"], 4, labels=["Q1", "Q2", "Q3", "Q4"])):
-/workspace/scratch/492015b7a717/CF3_Luminosity_Local_Expansion_Reproducibility/analyze_cf3.py:108: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+/workspace/scratch/492015b7a717/cf3_package_audit_20260819/CF3_Luminosity_Local_Expansion_Reproducibility/analyze_cf3.py:108: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for name, sub in df.groupby(pd.qcut(df["logV"], 4, labels=["Q1", "Q2", "Q3", "Q4"])):
+/workspace/scratch/492015b7a717/cf3_package_audit_20260819/CF3_Luminosity_Local_Expansion_Reproducibility/analyze_cf3.py:108: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
   for name, sub in df.groupby(pd.qcut(df["logV"], 4, labels=["Q1", "Q2", "Q3", "Q4"])):
 {
   "primary": {
@@ -270,6 +272,92 @@
         "p": 0.6256686911659647,
         "v_min": 9428.0,
         "v_max": 14934.0
+      }
+    ]
+  },
+  "primary_no_hloc_cut": {
+    "label": "primary_no_hloc_cut",
+    "n": 860,
+    "H_median": 73.02072776175257,
+    "H_iqr": [
+      67.24586688246404,
+      79.24512640877246
+    ],
+    "logL_range": [
+      10.06,
+      14.21
+    ],
+    "V_range": [
+      3010.0,
+      14978.0
+    ],
+    "raw_pearson": {
+      "r": 0.07907401568299118,
+      "p": 0.020386100877737
+    },
+    "raw_spearman": {
+      "rho": 0.08111220042918564,
+      "p": 0.01735317477772617
+    },
+    "partial_spearman_logV_logCF": {
+      "rho": 0.11884581442894096,
+      "p": 0.00047841556664994544
+    },
+    "adjusted_ols": {
+      "beta": 0.038078366817285415,
+      "se_hc3": 0.016334054102253026,
+      "p": 0.019974961793498638,
+      "ci95_hc3": [
+        0.006063620776869484,
+        0.07009311285770134
+      ],
+      "bootstrap_ci95": [
+        0.006823700149174166,
+        0.07014045257553601
+      ],
+      "interpret_pct_H_per_dex": 9.163730055141418
+    },
+    "residual_spearman": {
+      "rho": 0.0853186407706728,
+      "p": 0.012315957975952658
+    },
+    "permutation": {
+      "rho": 0.0853186407706728,
+      "p": 0.009798040391921616,
+      "nperm": 5000
+    },
+    "quartiles": [
+      {
+        "stratum": "Q1",
+        "n": 215,
+        "rho": 0.12184964021239225,
+        "p": 0.07460254120436448,
+        "v_min": 3010.0,
+        "v_max": 5452.0
+      },
+      {
+        "stratum": "Q2",
+        "n": 215,
+        "rho": 0.06524824933837883,
+        "p": 0.34101335677331135,
+        "v_min": 5454.0,
+        "v_max": 8501.0
+      },
+      {
+        "stratum": "Q3",
+        "n": 215,
+        "rho": 0.11646484065548451,
+        "p": 0.08846394819004565,
+        "v_min": 8509.0,
+        "v_max": 11202.0
+      },
+      {
+        "stratum": "Q4",
+        "n": 215,
+        "rho": 0.07844380342991493,
+        "p": 0.2520963368738516,
+        "v_min": 11214.0,
+        "v_max": 14978.0
       }
     ]
   }

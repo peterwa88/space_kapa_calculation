@@ -16,6 +16,8 @@ and tests its association with the group K-s-band luminosity `logLKs`. The adjus
 
 The primary and strict-quality group samples show a positive adjusted association. The SN Ia-only sensitivity sample is statistically consistent with zero. Accordingly, the manuscript interprets the result as preliminary catalog-level evidence, not as a causal demonstration or a precision measurement of a new physical effect.
 
+An additional truncation sensitivity analysis repeats the primary model without the broad `40 <= Hloc <= 110` outcome cut. It retains 860 groups and tests whether the primary association was created by that cut.
+
 ## Data provenance
 
 The two raw TSV files were downloaded without modification from the CDS VizieR catalog **J/AJ/152/50**, *Cosmicflows-3 catalog (CF3)* (Tully et al. 2016):
@@ -36,6 +38,7 @@ The TSV headers retain the exact VizieR request URLs, retrieval dates, column de
 - `run_all.py` — runs the complete analysis and figure-generation pipeline.
 - `requirements.txt` — Python package requirements.
 - `analysis_primary.csv` — primary sample plus residualized variables (N = 858).
+- `analysis_primary_no_hloc_cut.csv` — primary-eligible sample without the broad `Hloc` outcome cut (N = 860).
 - `analysis_strict.csv` — strict-quality sample plus residualized variables (N = 242).
 - `analysis_sn_only.csv` — SN Ia-only sensitivity sample plus residualized variables (N = 188).
 - `analysis_results.json` — full machine-readable summary statistics.
@@ -69,6 +72,7 @@ The scripts use fixed random seed `20260819`. They overwrite the derived CSV, JS
 | Sample | N | Adjusted beta (dex/dex) | HC3 95% CI | p-value | Approximate Hloc change per luminosity dex |
 |---|---:|---:|---:|---:|---:|
 | Primary | 858 | 0.0384 | [0.0068, 0.0700] | 0.0176 | +9.24% |
+| Primary without broad Hloc cut | 860 | 0.0381 | [0.0061, 0.0701] | 0.0200 | +9.16% |
 | Strict quality | 242 | 0.0963 | [0.0302, 0.1624] | 0.00468 | +24.83% |
 | SN Ia only | 188 | 0.0106 | [-0.0159, 0.0370] | 0.435 | +2.46% |
 
