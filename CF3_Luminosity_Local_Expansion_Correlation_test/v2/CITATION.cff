@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this analysis package, please cite the accompanying manuscript and the Cosmicflows-3 catalog."
+title: "CF3 Luminosity-Local-Expansion-Proxy Correlation Test: Complete Reproducibility Package"
+version: "2.0"
+date-released: 2026-08-20
+authors:
+  - family-names: Wang
+    given-names: Peter Yongtao
+    alias: Yongtao Wang
+    affiliation: Shandong Qizhang Intelligent Technology Co., Ltd.
+type: software
+preferred-citation:
+  type: article
+  title: "An Exploratory Correlation Test of Luminosity and a Local-Expansion Proxy in Cosmicflows-3 Galaxy Groups"
+  authors:
+    - family-names: Wang
+      given-names: Peter Yongtao
+  year: 2026
+references:
+  - type: article
+    title: "Cosmicflows-3"
+    authors:
+      - family-names: Tully
+        given-names: R. Brent
+    journal: "The Astronomical Journal"
+    volume: 152
+    issue: 2
+    year: 2016
+    doi: 10.3847/0004-6256/152/2/50
+  - type: dataset
+    title: "Cosmicflows-3 catalog (CF3)"
+    year: 2018
+    doi: 10.26093/cds/vizier.51520050

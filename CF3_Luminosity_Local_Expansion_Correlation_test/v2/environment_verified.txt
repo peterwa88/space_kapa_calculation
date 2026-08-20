@@ -1,0 +1,6 @@
+Verified environment on 2026-08-20
+Python 3.12.13
+NumPy 2.3.5
+pandas 2.2.3
+SciPy 1.17.0
+Matplotlib 3.10.8
